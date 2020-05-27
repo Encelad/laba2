@@ -1,0 +1,16 @@
+go_binary { 
+  name: "bood", 
+  
+  pkg: "github.com/Encelad/ArchLab2/build/cmd/bood",
+  testPkg: "github.com/Encelad/ArchLab2/...",
+  outTestFile: "test.txt",
+
+  srcs: ["**/*.go", "../go.mod"],
+  srcsExclude: ["**/*_test.go"]
+}
+js_bundle {
+    name: "my-script",
+    srcs: ["../examples/index.js", "../examples/iterable.js"],
+    obfuscate: true,
+}
+
